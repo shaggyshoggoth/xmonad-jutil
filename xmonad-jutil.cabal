@@ -1,0 +1,56 @@
+version:            0.1
+homepage:           https://github.com/shaggyshoggoth/xmonad-jutil
+synopsis:           Josh Thibodaux's XMonad extensions.
+description:
+    Actions for easy visible window navigation and single window focus.
+
+category:           System
+license:            BSD3
+license-file:       LICENSE
+author:             Josh Thibodaux
+maintainer:         josh@thibodaux.net
+extra-source-files: README.md
+cabal-version:      >= 1.6
+build-type:         Simple
+bug-reports:        https://github.com/shaggyshoggoth/xmonad-jutil/issues
+
+tested-with: GHC==8.0.2
+
+source-repository head
+  type:     git
+  location: https://github.com/shaggyshoggoth/xmonad-jutil
+
+executable xmonadctl
+  main-is: xmonadctl.hs
+  build-depends: base >= 4.5 && < 5
+
+library
+    build-depends: base >= 4.5 && < 5,
+                   bytestring >= 0.10 && < 0.11,
+                   containers >= 0.5 && < 0.7,
+                   directory,
+                   extensible-exceptions,
+                   filepath,
+                   old-locale,
+                   old-time,
+                   process,
+                   random,
+                   mtl >= 1 && < 3,
+                   unix,
+                   X11>=1.6.1 && < 2.0,
+                   xmonad>=0.13   && < 0.16,
+                   utf8-string,
+                   xmonad-contrib>=0.13 && < 0.17
+
+    if true
+        ghc-options:    -fwarn-tabs -Wall
+
+    if impl(ghc >= 6.12.1)
+        ghc-options:    -fno-warn-unused-do-bind
+
+    exposed-modules:    XMonad.Actions.EasyNav
+                        XMonad.Util.Math
+                        XMonad.Util.Window
+                        XMonad.Actions.Goyo
+                        XMonad.Util.Window.Sorting
+                        XMonad.Util.Window.Sorting.Ltbr
