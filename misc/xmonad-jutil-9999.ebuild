@@ -1,4 +1,4 @@
-EAPI=5
+EAPI=7
 
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal git-r3
