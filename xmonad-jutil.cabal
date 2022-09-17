@@ -11,7 +11,7 @@ license-file:       LICENSE
 author:             Josh Thibodaux
 maintainer:         josh@thibodaux.net
 extra-source-files: README.md
-cabal-version:      >= 1.6
+cabal-version:      >= 1.8
 build-type:         Simple
 bug-reports:        https://github.com/shaggyshoggoth/xmonad-jutil/issues
 
