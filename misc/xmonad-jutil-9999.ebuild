@@ -14,6 +14,7 @@ IUSE=""
 
 RDEPEND="dev-haskell/extensible-exceptions:=[profile?]
         >=dev-haskell/mtl-1:=[profile?] <dev-haskell/mtl-3:=[profile?]
+        dev-haskell/old-time:=[profile?]
         dev-haskell/old-locale:=[profile?]
         dev-haskell/random:=[profile?]
         dev-haskell/utf8-string:=[profile?]
